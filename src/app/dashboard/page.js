@@ -16,6 +16,7 @@ const SplinesChartComponent = dynamic(
 
 const Dashboard = () => {
   const { data: session, status } = useSession();
+  console.log("session", session);
 
   if (status == "loading") {
     return <LoadingSpinner />;

@@ -4,16 +4,22 @@ import NavBar from "@/components/NavBar/NavBar";
 import SideBar from "@/components/SideBar/SideBar";
 import { useSession } from "next-auth/react";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
+import { useRouter } from "next/navigation";
+import { signoutHandler } from "@/utils/utils";
 const DashboardLayout = ({ children }) => {
 
   const { data: session, status } = useSession();
+  const router = useRouter();
 
   if (status === "loading"){
     return  <LoadingSpinner />;
   }
 
 
-  if (status === "unauthenticated") return null;
+  if (status === "unauthenticated") {
+    signoutHandler()
+    return <LoadingSpinner />;
+  }
 
   return (
     <div className="h-screen">
