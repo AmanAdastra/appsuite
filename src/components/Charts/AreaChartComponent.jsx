@@ -52,15 +52,6 @@ class ApexChart extends React.Component {
         stroke: {
           curve: "straight",
         },
-
-        title: {
-          text: "Users Analysis",
-          align: "left",
-        },
-        subtitle: {
-          text: "Price Movements",
-          align: "left",
-        },
         labels: mockDates,
         xaxis: {
           type: "datetime",

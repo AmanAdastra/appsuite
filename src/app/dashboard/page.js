@@ -25,11 +25,11 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className=" w-full  lg:w-1/2 py-5">
+    <div className="flex items-stretch flex-row w-full">
+      <div className="p-2 w-1/2">
         <AreaChartComponent />
       </div>
-      <div className=" w-full  lg:w-1/2 py-5">
+      <div className="p-2 w-1/2">
         <SplinesChartComponent />
       </div>
     </div>
