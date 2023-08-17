@@ -1,25 +1,10 @@
 "use client"
-import React from "react";
+
+import React from 'react'
 import NavBar from "@/components/NavBar/NavBar";
 import SideBar from "@/components/SideBar/SideBar";
-import { useSession } from "next-auth/react";
-import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
-import { signoutHandler } from "@/utils/utils";
 
-const UsersLayout = ({ children }) => {
-
-  const { data: session, status } = useSession();
-
-  if (status === "loading"){
-    return  <LoadingSpinner />;
-  }
-
-
-  if (status === "unauthenticated") {
-    signoutHandler()
-    return <LoadingSpinner />;
-  }
-
+const RootLayoutDesign = ({children}) => {
   return (
     <div className="h-screen">
       <div className="mb-2">
@@ -34,7 +19,7 @@ const UsersLayout = ({ children }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default UsersLayout;
+export default RootLayoutDesign

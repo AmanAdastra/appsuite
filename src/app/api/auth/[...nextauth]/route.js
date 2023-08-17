@@ -21,7 +21,7 @@ const handler = NextAuth({
     signOut: "/",
   },
   session: {
-    maxAge: 10
+    maxAge: 300
   }
 });
 
