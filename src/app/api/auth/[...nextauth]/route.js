@@ -18,7 +18,7 @@ const handler = NextAuth({
   ],
   pages: {
     signIn: "/dashboard",
-    signOut: "/signout",
+    signOut: "/",
   },
   session: {
     maxAge: 10
